@@ -1,0 +1,53 @@
+cmake_minimum_required(VERSION 3.16)
+
+project(syscheck VERSION 0.1 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(Qt6 REQUIRED COMPONENTS Quick)
+
+qt_standard_project_setup(REQUIRES 6.8)
+
+qt_add_executable(appsyscheck
+    main.cpp
+)
+
+qt_add_qml_module(appsyscheck
+    URI syscheck
+    QML_FILES
+        design/Main.qml
+        design/component/Header.qml
+        design/component/Footer.qml
+        design/component/Sidebar.qml
+        design/component/MainBackground.qml
+        design/component/SidebarElement.qml
+        design/pages/Summary.qml
+    RESOURCES
+        img/logo.png
+        img/main_background.png
+        img/window_logo.ico
+        fonts/Roboto.ttf
+        fonts/JetBrainsMono.ttf
+)
+
+# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
+# If you are developing for iOS or macOS you should consider setting an
+# explicit, fixed bundle identifier manually though.
+set_target_properties(appsyscheck PROPERTIES
+#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appsyscheck
+    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
+    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+    MACOSX_BUNDLE TRUE
+    WIN32_EXECUTABLE TRUE
+)
+
+target_link_libraries(appsyscheck
+    PRIVATE Qt6::Quick
+)
+
+include(GNUInstallDirs)
+install(TARGETS appsyscheck
+    BUNDLE DESTINATION .
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)

@@ -1,0 +1,40 @@
+import QtQuick 2.2
+import QtQuick.Window 2.1
+import "component"
+
+Window {
+   id: root
+   objectName: "window"
+   visible: true
+   visibility: "FullScreen"
+   width: 1920
+   height: 1080
+   color: "#000000"
+
+   Header{
+      id: headerblcok
+      width: parent.width
+      anchors.top: parent.top
+   }
+
+   Footer{
+      id: footerblock
+      width: parent.width
+      anchors.bottom: parent.bottom
+   }
+
+   Sidebar{
+      id: sidebarblock
+      anchors.left: parent.left
+      anchors.top: headerblcok.bottom
+      anchors.bottom: footerblock.top
+   }
+
+   MainBackground{
+      id:backgroundblock
+      anchors.left: sidebarblock.right
+      anchors.top: headerblcok.bottom
+      anchors.bottom: footerblock.top
+      anchors.right: parent.right
+   }
+}
