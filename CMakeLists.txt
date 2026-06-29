@@ -21,7 +21,8 @@ qt_add_qml_module(appsyscheck
         design/component/Sidebar.qml
         design/component/MainBackground.qml
         design/component/SidebarElement.qml
-        design/pages/Summary.qml
+        design/pages/SummaryPage.qml
+        design/component/SidebarSection.qml
     RESOURCES
         img/logo.png
         img/main_background.png

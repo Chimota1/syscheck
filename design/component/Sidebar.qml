@@ -10,19 +10,8 @@ Rectangle {
     Column{
         anchors.fill: parent
         spacing: 10
-        Rectangle{
-            width: parent.width
-            height: 35
-            color: "#000000"
-            Text {
-                id: systemtitle
-                text: qsTr("SYSTEM")
-                font.bold: true
-                font.pixelSize: 20
-                font.family: roboto.name
-                anchors.centerIn: parent
-                color: "#5CA8FF"
-            }
+        SidebarSection{
+            title: qsTr("SYSTEM")
         }
         SidebarElement{
             nameOfblock: qsTr("Summary")
@@ -33,19 +22,8 @@ Rectangle {
         SidebarElement{
             nameOfblock: qsTr("MotherBoard")
         }
-        Rectangle{
-            width: parent.width
-            height: 35
-            color: "#000000"
-            Text {
-                id: hardwaretitle
-                text: qsTr("HARDWARE")
-                font.bold: true
-                font.pixelSize: 20
-                font.family: roboto.name
-                anchors.centerIn: parent
-                color: "#5CA8FF"
-            }
+        SidebarSection{
+            title: qsTr("HARDWARE")
         }
         SidebarElement{
             nameOfblock: qsTr("CPU")
@@ -62,20 +40,8 @@ Rectangle {
         SidebarElement{
             nameOfblock: qsTr("Display")
         }
-
-        Rectangle{
-            width: parent.width
-            height: 35
-            color: "#000000"
-            Text {
-                id: misctitle
-                text: qsTr("MISC")
-                font.bold: true
-                font.pixelSize: 20
-                font.family: roboto.name
-                anchors.centerIn: parent
-                color: "#5CA8FF"
-            }
+        SidebarSection{
+            title: qsTr("MISC")
         }
         SidebarElement{
             nameOfblock: qsTr("Network")
