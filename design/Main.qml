@@ -1,8 +1,10 @@
 import QtQuick 2.2
 import QtQuick.Window 2.1
 import "component"
+import "pages"
 
 Window {
+   property string currentPage: qsTr("Summary")
    id: root
    objectName: "window"
    visible: true
@@ -17,17 +19,27 @@ Window {
       anchors.top: parent.top
    }
 
-   Footer{
-      id: footerblock
-      width: parent.width
-      anchors.bottom: parent.bottom
-   }
-
    Sidebar{
       id: sidebarblock
       anchors.left: parent.left
       anchors.top: headerblcok.bottom
       anchors.bottom: footerblock.top
+   }
+
+   Loader{
+      id: maincontent
+      anchors.left: sidebarblock.right
+      anchors.top: headerblcok.bottom
+      anchors.bottom: footerblock.top
+      anchors.right: parent.right
+      z:1
+      source:
+      if(currentPage == "Summary"){
+         return "pages/SummaryPage.qml"
+      }
+      else{
+         return "pages/PageNotFound.qml"
+      }
    }
 
    MainBackground{
@@ -36,5 +48,11 @@ Window {
       anchors.top: headerblcok.bottom
       anchors.bottom: footerblock.top
       anchors.right: parent.right
+   }
+
+   Footer{
+      id: footerblock
+      width: parent.width
+      anchors.bottom: parent.bottom
    }
 }

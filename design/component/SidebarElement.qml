@@ -3,7 +3,6 @@ import QtQuick
 Rectangle {
     id: sidebarelement
     property string nameOfblock
-    property int count: 0
     width: parent.width
     height: 30
     color: {

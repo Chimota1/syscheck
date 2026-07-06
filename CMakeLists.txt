@@ -21,12 +21,15 @@ qt_add_qml_module(appsyscheck
         design/component/Sidebar.qml
         design/component/MainBackground.qml
         design/component/SidebarElement.qml
-        design/pages/SummaryPage.qml
         design/component/SidebarSection.qml
+        design/component/InfoCard.qml
+        design/pages/SummaryPage.qml
+        design/pages/PageNotFound.qml
     RESOURCES
         img/logo.png
         img/main_background.png
         img/window_logo.ico
+        img/close.png
         fonts/Roboto.ttf
         fonts/JetBrainsMono.ttf
 )

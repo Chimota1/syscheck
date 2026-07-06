@@ -1,5 +1,5 @@
 import QtQuick
-
+import "qrc:qt/qml/syscheck/design/pages"
 Image {
     id: imagebackground
     source: "qrc:/qt/qml/syscheck/img/main_background.png"

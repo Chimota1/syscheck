@@ -3,7 +3,6 @@ import QtQuick
 Rectangle {
     FontLoader{id:roboto; source: "qrc:/qt/qml/syscheck/fonts/Roboto.ttf"}
     FontLoader{id:jetbrainsmono; source: "qrc:/qt/qml/syscheck/fonts/JetBrainsMono.ttf"}
-    property string currentPage: qsTr("Summary")
     id: sidebar
     color: "#181818"
     width: parent.width * 0.2
