@@ -7,29 +7,27 @@ Rectangle {
     width: parent.width
     height: parent.height
     anchors.centerIn: parent
-    border.color: "#0D0F17";
+    border.color: "#0D0F17"
     border.width: 3
-    color: "#000000"
+    color: "#525252"
     radius: 50
     clip: true
-    Text {
-        id: titletext
-        text: "⬛" + title
-        color: titleColor
-        font.family: jetbrainsmono.name
-        font.pixelSize: 20
-        anchors.left: parent.left
-        anchors.top: parent.top
-        anchors.leftMargin: 15
-        anchors.topMargin: 25
-    }
     Rectangle{
-        id: line
+        id:titlebackground
         width: parent.width
-        height: 2
-        color: "#2A2A2A"
-        anchors.top: titletext.bottom
-        anchors.topMargin: 10
-        opacity: 0.7
+        height: parent.height * 0.1
+        color: "#000000"
+        Text {
+            id: titletext
+            text: "⬛" + title
+            color: titleColor
+            font.family: jetbrainsmono.name
+            font.pixelSize: 20
+            anchors.left: parent.left
+            anchors.top: parent.top
+            anchors.leftMargin: 15
+            anchors.topMargin: 25
+        }
     }
+
 }
