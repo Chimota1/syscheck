@@ -32,6 +32,7 @@ qt_add_qml_module(appsyscheck
         img/close.png
         fonts/Roboto.ttf
         fonts/JetBrainsMono.ttf
+        QML_FILES design/component/InfoCardSection.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

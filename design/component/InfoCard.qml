@@ -1,22 +1,25 @@
 import QtQuick
+import QtQuick.Layouts
 Rectangle {
     FontLoader{id:roboto; source: "qrc:/qt/qml/syscheck/fonts/Roboto.ttf"}
     FontLoader{id:jetbrainsmono; source: "qrc:/qt/qml/syscheck/fonts/JetBrainsMono.ttf"}
     property string title
     property color titleColor
+    default property alias contentBlock : content.children
     width: parent.width
     height: parent.height
     anchors.centerIn: parent
     border.color: "#0D0F17"
     border.width: 3
-    color: "#525252"
+    color: "#242424"
     radius: 50
     clip: true
     Rectangle{
-        id:titlebackground
+        id: titlebackground
         width: parent.width
         height: parent.height * 0.1
         color: "#000000"
+        anchors.bottomMargin: 20
         Text {
             id: titletext
             text: "⬛" + title
@@ -29,5 +32,10 @@ Rectangle {
             anchors.topMargin: 25
         }
     }
-
+    ColumnLayout {
+        id: content
+        width: parent.width
+        anchors.top: titlebackground.bottom
+        anchors.topMargin: 30
+    }
 }
