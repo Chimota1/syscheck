@@ -46,4 +46,4 @@ Rectangle {
         onClicked: currentPage = nameOfblock
         cursorShape: Qt.PointingHandCursor
     }
-    }
+}

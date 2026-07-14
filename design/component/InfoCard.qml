@@ -11,7 +11,7 @@ Rectangle {
     anchors.centerIn: parent
     border.color: "#0D0F17"
     border.width: 3
-    color: "#242424"
+    color: "#1B1D23"
     radius: 50
     clip: true
     Rectangle{
@@ -32,10 +32,13 @@ Rectangle {
             anchors.topMargin: 25
         }
     }
-    ColumnLayout {
+    Column {
         id: content
-        width: parent.width
         anchors.top: titlebackground.bottom
-        anchors.topMargin: 30
+        height: parent.height - 3
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.topMargin: 15
+        anchors.leftMargin: 3
     }
 }
