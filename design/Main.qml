@@ -28,18 +28,12 @@ Window {
 
    Loader{
       id: maincontent
-      anchors.left: sidebarblock.right
-      anchors.top: headerblcok.bottom
-      anchors.bottom: footerblock.top
-      anchors.right: parent.right
+      anchors.fill: backgroundblock
       z:1
       source:
-      if(currentPage == "Summary"){
-         return "pages/SummaryPage.qml"
-      }
-      else{
-         return "pages/PageNotFound.qml"
-      }
+          currentPage === "Summary"
+                  ? "pages/SummaryPage.qml"
+                  : "pages/PageNotFound.qml"
    }
 
    MainBackground{

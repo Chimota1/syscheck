@@ -1,18 +1,24 @@
 import QtQuick
 import QtQuick.Layouts
-
+import QtQuick.Controls
 Rectangle {
     FontLoader{id:roboto; source: "qrc:/qt/qml/syscheck/fonts/Roboto.ttf"}
     property string nameOfBlock
     property string valueOfBlock
     property color colorOfBlock
-    width: parent.width
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.leftMargin: 6
+    anchors.rightMargin: 6
     height: 30
     color: colorOfBlock
+    radius: 10
     RowLayout{
-        spacing: 150
         anchors.verticalCenter: parent.verticalCenter
-        anchors.left: parent.left
+        anchors.fill: parent
+        anchors.leftMargin: 20
+        anchors.rightMargin: 20
+
         Text {
             id: nameofblock
             text: nameOfBlock
@@ -21,6 +27,7 @@ Rectangle {
             color: "#8B90A0"
             anchors.left: parent.left
             anchors.leftMargin: 20
+            Layout.fillWidth: true
         }
         Text {
             id: valueBlock
