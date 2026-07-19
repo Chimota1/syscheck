@@ -9,7 +9,7 @@ Rectangle {
     default property alias contentBlock : content.children
     Layout.fillWidth: true
     Layout.preferredHeight: 480
-    Layout.maximumWidth: 440
+    Layout.maximumWidth: 530
     Layout.alignment: Qt.AlignTop | Qt.AlignLeft
     border.color: "#0D0F17"
     border.width: 3
@@ -34,30 +34,14 @@ Rectangle {
             anchors.verticalCenter: titlebackground.verticalCenter
         }
     }
-    ScrollView{
-        id: scroll
+    Column {
+        id: content
         anchors.top: titlebackground.bottom
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         anchors.topMargin: 10
-        ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
-        ScrollBar.vertical: ScrollBar{
-
-            background: Rectangle {
-                color: "#0F1015"
-                radius: 4
-            }
-
-            contentItem: Rectangle {
-                radius: 4
-                color: "#404552"
-            }
-        }
-        Column {
-            id: content
-            width: scroll.availableWidth
-            spacing: 2
-        }
+        spacing: 2
     }
 }
+

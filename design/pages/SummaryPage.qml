@@ -8,6 +8,8 @@ Item{
         id:scrollView
         width: parent.width
         height: parent.height
+        leftPadding: 10
+        topPadding: 6
         ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
         ScrollBar.vertical: ScrollBar{
 
@@ -29,6 +31,7 @@ Item{
             InfoCard{
                 title: qsTr("CPU  —  Quick Summary")
                 titleColor: "#FF9800"
+                Layout.preferredHeight: 500
                 InfoCardSection {
                     sectionTitle: qsTr("Processor")
                 }
@@ -86,7 +89,7 @@ Item{
             InfoCard{
                 title: qsTr("Operating System")
                 titleColor: "#00E676"
-                Layout.preferredHeight: 305
+                Layout.preferredHeight: 315
                 Repeater{
                     model: [
                         {name: "OS Name", value: "Microsoft Windows 11 Pro"},
@@ -132,6 +135,7 @@ Item{
             InfoCard{
                 title: qsTr("Motherboard  —  Quick Summary")
                 titleColor: "#FF9800"
+                Layout.preferredHeight: 440
                 InfoCardSection{
                     sectionTitle: qsTr("Board")
                 }
