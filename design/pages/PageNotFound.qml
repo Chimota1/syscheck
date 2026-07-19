@@ -5,14 +5,9 @@ Item {
     FontLoader{id:roboto; source: "qrc:/qt/qml/syscheck/fonts/Roboto.ttf"}
     width: parent.width
     height: parent.height
-    Rectangle {
-        anchors.fill: parent
-        color: "red"
-        opacity: 0.2
-    }
     ColumnLayout{
         anchors.top: parent.top
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.centerIn: parent
         anchors.topMargin: 10
         spacing: 50
         Image {

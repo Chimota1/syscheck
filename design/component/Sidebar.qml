@@ -5,7 +5,7 @@ Rectangle {
     FontLoader{id:jetbrainsmono; source: "qrc:/qt/qml/syscheck/fonts/JetBrainsMono.ttf"}
     id: sidebar
     color: "#181818"
-    width: parent.width * 0.2
+    width: 220
     Column{
         anchors.fill: parent
         spacing: 10

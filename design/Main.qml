@@ -48,5 +48,6 @@ Window {
       id: footerblock
       width: parent.width
       anchors.bottom: parent.bottom
+      z:2
    }
 }

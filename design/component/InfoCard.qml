@@ -9,7 +9,7 @@ Rectangle {
     default property alias contentBlock : content.children
     Layout.fillWidth: true
     Layout.preferredHeight: 480
-    Layout.maximumWidth: 520
+    Layout.maximumWidth: 440
     Layout.alignment: Qt.AlignTop | Qt.AlignLeft
     border.color: "#0D0F17"
     border.width: 3
@@ -19,7 +19,7 @@ Rectangle {
     Rectangle{
         id: titlebackground
         width: parent.width
-        height: parent.height * 0.1
+        height: 40
         color: "#000000"
         anchors.bottomMargin: 20
         radius: 5
@@ -28,7 +28,7 @@ Rectangle {
             text: "⬛" + title
             color: titleColor
             font.family: jetbrainsmono.name
-            font.pixelSize: 20
+            font.pixelSize: 16
             anchors.left: titlebackground.left
             anchors.leftMargin: 15
             anchors.verticalCenter: titlebackground.verticalCenter
@@ -43,6 +43,7 @@ Rectangle {
         anchors.topMargin: 10
         ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
         ScrollBar.vertical: ScrollBar{
+
             background: Rectangle {
                 color: "#0F1015"
                 radius: 4
@@ -55,7 +56,6 @@ Rectangle {
         }
         Column {
             id: content
-            anchors.top: titlebackground.bottom
             width: scroll.availableWidth
             spacing: 2
         }

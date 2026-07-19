@@ -25,9 +25,6 @@ Rectangle {
             font.family: roboto.name
             font.pixelSize: 18
             color: "#8B90A0"
-            anchors.left: parent.left
-            anchors.leftMargin: 20
-            Layout.fillWidth: true
         }
         Text {
             id: valueBlock
@@ -35,6 +32,8 @@ Rectangle {
             font.family: roboto.name
             font.pixelSize: 18
             color: "#E8EAF0"
+            Layout.alignment: Qt.AlignRight
+            anchors.rightMargin: 5
         }
     }
 }
