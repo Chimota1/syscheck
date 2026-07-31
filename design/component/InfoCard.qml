@@ -8,7 +8,6 @@ Rectangle {
     property color titleColor
     default property alias contentBlock : content.children
     Layout.fillWidth: true
-    Layout.preferredHeight: 480
     Layout.maximumWidth: 530
     Layout.alignment: Qt.AlignTop | Qt.AlignLeft
     border.color: "#0D0F17"
@@ -43,5 +42,6 @@ Rectangle {
         anchors.topMargin: 10
         spacing: 2
     }
+    implicitHeight: content.implicitHeight + 20
 }
 
