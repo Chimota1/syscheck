@@ -31,9 +31,11 @@ Window {
       anchors.fill: backgroundblock
       z:1
       source:
-          currentPage === "Summary"
-                  ? "pages/SummaryPage.qml"
-                  : "pages/PageNotFound.qml"
+          if (currentPage === "Summary")
+            return "pages/SummaryPage.qml"
+         else if (currentPage === "OS")
+             return "pages/OSPage.qml"
+         else return "pages/PageNotFound.qml"
    }
 
    MainBackground{

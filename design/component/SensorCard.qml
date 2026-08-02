@@ -39,7 +39,7 @@ Rectangle {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.topMargin: 10
-        spacing: 2
+        spacing: 18
     }
     implicitHeight: content.implicitHeight + 20
 }
