@@ -1,11 +1,14 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
+
 Rectangle {
     FontLoader{id:roboto; source: "qrc:/qt/qml/syscheck/fonts/Roboto.ttf"}
     property string nameOfBlock
     property string valueOfBlock
     property color colorOfBlock
+    property bool customUnderline: false
+
     anchors.left: parent.left
     anchors.right: parent.right
     anchors.leftMargin: 6
@@ -13,11 +16,12 @@ Rectangle {
     height: 30
     color: colorOfBlock
     radius: 10
-    RowLayout{
-        anchors.verticalCenter: parent.verticalCenter
+
+    RowLayout {
         anchors.fill: parent
         anchors.leftMargin: 20
         anchors.rightMargin: 20
+        spacing: 15
 
         Text {
             id: nameofblock
@@ -25,7 +29,16 @@ Rectangle {
             font.family: roboto.name
             font.pixelSize: 18
             color: "#8B90A0"
+            font.underline: customUnderline
+            Layout.fillWidth: true
+            MouseArea {
+                anchors.fill: parent
+                enabled: customUnderline
+                hoverEnabled: customUnderline
+                cursorShape: customUnderline ? Qt.PointingHandCursor : Qt.ArrowCursor
+            }
         }
+
         Text {
             id: valueBlock
             text: valueOfBlock
@@ -33,7 +46,6 @@ Rectangle {
             font.pixelSize: 18
             color: "#E8EAF0"
             Layout.alignment: Qt.AlignRight
-            anchors.rightMargin: 5
         }
     }
 }

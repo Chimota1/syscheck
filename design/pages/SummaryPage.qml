@@ -29,6 +29,7 @@ Item{
             ColumnLayout{
                 Layout.fillWidth: true
                 spacing: 20
+                Layout.alignment: Qt.AlignTop
                 InfoCard{
                     Layout.fillWidth: true
                     title: qsTr("CPU  —  Quick Summary")
@@ -134,6 +135,7 @@ Item{
             ColumnLayout{
                 Layout.fillWidth: true
                 spacing: 20
+                Layout.alignment: Qt.AlignTop
                 InfoCard{
                     title: qsTr("Operating System")
                     titleColor: "#00E676"
@@ -228,6 +230,7 @@ Item{
                 Layout.fillWidth: true
                 title: qsTr("Live System Snapshot")
                 titleColor: "#FF3D3D"
+                Layout.alignment: Qt.AlignTop
                 SensorBar{
                     title: qsTr("CPU Package Temp")
                     value: qsTr("78°C")

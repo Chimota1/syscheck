@@ -30,6 +30,7 @@ Item {
             ColumnLayout{
                 Layout.fillWidth: true
                 spacing: 20
+                Layout.alignment: Qt.AlignTop
                 InfoCard{
                     title: qsTr("OS  —  Version Details")
                     titleColor: "#00B4D8"
@@ -146,6 +147,7 @@ Item {
             ColumnLayout{
                 Layout.fillWidth: true
                 spacing: 20
+                Layout.alignment: Qt.AlignTop
                 InfoCard{
                     title: qsTr("Security  &  Virtualization")
                     titleColor: "#FF3D3D"
@@ -246,6 +248,7 @@ Item {
             ColumnLayout{
                 Layout.fillWidth: true
                 spacing: 20
+                Layout.alignment: Qt.AlignTop
                 InfoCard{
                     title: qsTr("Components  &  Runtime")
                     titleColor: "#00C853"
@@ -296,12 +299,12 @@ Item {
                     }
                     Repeater{
                         model: [
-                            { name: "SystemRoot", value: "Intel Core i9-14900K" },
-                            { name: "ProgramFiles", value: "Raptor Lake Refresh" },
-                            { name: "ProgramFiles(x86)", value: "LGA1700" },
-                            { name: "TEMP", value: "Intel 7" },
-                            { name: "USERPROFILE", value: "NT  10.0.22631.3447"},
-                            { name: "ComSpec", value: "6.7"}
+                            { name: "SystemRoot", value: "C:/Windows", underline: true },
+                            { name: "ProgramFiles", value: "C:/Program Files", underline: true },
+                            { name: "ProgramFiles(x86)", value: "C:/Program Files(x86)", underline: true },
+                            { name: "TEMP", value: "C:/Users/Admin/AppData/Temp", underline: true },
+                            { name: "USERPROFILE", value: "C:/Users/Administrator", underline: true},
+                            { name: "ComSpec", value: "C:/Windows/System32/cmd.exe", underline: true}
                         ]
                         InfoRow{
                             required property var modelData
@@ -309,6 +312,7 @@ Item {
                             nameOfBlock: modelData.name
                             valueOfBlock: modelData.value
                             colorOfBlock: index % 2 === 1 ? "#202329" : "#252830"
+                            customUnderline: modelData.underline
                         }
                     }
                     InfoCardSection{
