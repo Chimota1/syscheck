@@ -29,6 +29,8 @@ qt_add_qml_module(appsyscheck
         design/component/InfoRow.qml
         design/component/SensorCard.qml
         design/component/SensorBar.qml
+        design/pages/OSPage.qml
+        design/component/TableCard.qml
     RESOURCES
         img/logo.png
         img/main_background.png
@@ -36,7 +38,8 @@ qt_add_qml_module(appsyscheck
         img/close.png
         fonts/Roboto.ttf
         fonts/JetBrainsMono.ttf
-        QML_FILES design/pages/OSPage.qml
+        QML_FILES design/component/TableHeader.qml
+        QML_FILES design/component/TableRow.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
