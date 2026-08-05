@@ -6,9 +6,10 @@ Rectangle {
     FontLoader{id:jetbrainsmono; source: "qrc:/qt/qml/syscheck/fonts/JetBrainsMono.ttf"}
     property string title
     property color titleColor
+    property int customMaximumWidth: 530
     default property alias contentBlock : content.children
     Layout.fillWidth: true
-    Layout.maximumWidth: 530
+    Layout.maximumWidth: customMaximumWidth
     Layout.alignment: Qt.AlignTop | Qt.AlignLeft
     border.color: "#0D0F17"
     border.width: 3
