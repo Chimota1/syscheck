@@ -35,6 +35,8 @@ Window {
             return "pages/SummaryPage.qml"
          else if (currentPage === "OS")
              return "pages/OSPage.qml"
+         else if (currentPage === "MotherBoard")
+             return "pages/MotherboardPage.qml"
          else return "pages/PageNotFound.qml"
    }
 

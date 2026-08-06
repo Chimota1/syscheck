@@ -40,8 +40,11 @@ Rectangle {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.topMargin: 10
-        spacing: 18
+        spacing: 10
     }
-    implicitHeight: content.implicitHeight + 20
+    implicitHeight: titlebackground.height
+                  + content.implicitHeight
+                  + content.anchors.topMargin
+                  + 10
 }
 

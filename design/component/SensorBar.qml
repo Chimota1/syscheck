@@ -31,7 +31,7 @@ Column{
     Rectangle {
         id: background
         width: parent.width
-        height: 20
+        height: 10
         radius: 25
         color: "#4A4F60"
         Rectangle{

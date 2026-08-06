@@ -3,19 +3,22 @@ import QtQuick.Layouts
 
 Row {
     FontLoader{id:roboto; source: "qrc:/qt/qml/syscheck/fonts/Roboto.ttf"}
-    property var columns: []
-    anchors.verticalCenter: parent.verticalCenter
+    id: root
+    property var myColumns: []
+    width: parent.width
+    anchors.left: parent.left
+    anchors.leftMargin: 10
 
     Repeater {
-        model: columns
+        model: myColumns
 
         Text {
             required property var modelData
 
-            width: modelData.width
+            width: root.width * modelData.customWidth
             text: modelData.text
-            color: "#E0E0E0"
-            font.pixelSize: 18
+            color: modelData.customColor ? modelData.customColor : "#E0E0E0"
+            font.pixelSize: 14
             font.family: roboto.name
         }
     }
