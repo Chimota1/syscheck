@@ -37,6 +37,8 @@ Window {
              return "pages/OSPage.qml"
          else if (currentPage === "MotherBoard")
              return "pages/MotherboardPage.qml"
+         else if (currentPage === "CPU")
+             return "pages/CPUPage.qml"
          else return "pages/PageNotFound.qml"
    }
 
