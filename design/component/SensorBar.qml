@@ -2,8 +2,9 @@ import QtQuick
 import QtQuick.Layouts
 
 Column{
+    id: root
     property string title
-    property real precent: 0.67
+    property real precent
     property color sliderColor
     property string value
     FontLoader{id:roboto; source: "qrc:/qt/qml/syscheck/fonts/Roboto.ttf"}
@@ -14,7 +15,7 @@ Column{
     anchors.rightMargin: 10
     spacing: 2
     RowLayout{
-        spacing: 150
+        width: parent.width
         Text{
             text: title
             color: "#8B90A0"
@@ -28,19 +29,9 @@ Column{
             font.family: jetbrainsmono.name
         }
     }
-    Rectangle {
-        id: background
+    BaseBar{
         width: parent.width
-        height: 10
-        radius: 25
-        color: "#4A4F60"
-        Rectangle{
-            anchors.left: parent.left
-            anchors.top: parent.top
-            anchors.bottom: parent.bottom
-            width: background.width * precent
-            radius: parent.radius
-            color: sliderColor
-        }
+        precent: root.precent
+        sliderColor: root.sliderColor
     }
 }

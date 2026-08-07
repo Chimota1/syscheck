@@ -235,76 +235,91 @@ Item{
                     title: qsTr("CPU Package Temp")
                     value: qsTr("78°C")
                     sliderColor: "#FF9800"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("CPU Utilization")
                     value: qsTr("72°%")
                     sliderColor: "#00D4FF"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("CPU Package Power")
                     value: qsTr("185 W")
                     sliderColor: "#FF3D3D"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("CPU Core Voltage")
                     value: qsTr("1.312 V")
                     sliderColor: "#FFD600"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("CPU Package Temp")
                     value: qsTr("78°C")
                     sliderColor: "#FF9800"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("GPU Core Temp")
                     value: qsTr("64°C")
                     sliderColor: "#00E676"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("GPU Utilization")
                     value: qsTr("88%")
                     sliderColor: "#00E676"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("GPU Power")
                     value: qsTr("310 W")
                     sliderColor: "#FF9800"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("Memory Used")
                     value: qsTr("48.2 / 64 GB")
                     sliderColor: "#B47EFF"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("VRAM Used")
                     value: qsTr("14.2 / 24 GB")
                     sliderColor: "#B47EFF"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("Sys Fan 1")
                     value: qsTr("1240 RPM")
                     sliderColor: "#00D4FF"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("CPU AIO Pump")
                     value: qsTr("2600 RPM")
                     sliderColor: "#00D4FF"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("+12V Rail")
                     value: qsTr("12.024 V")
                     sliderColor: "#00E676"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("VRM Temp")
                     value: qsTr("68°C")
                     sliderColor: "#FFD600"
+                    precent: 0.81
                 }
                 SensorBar{
                     title: qsTr("M.2 NVMe Temp")
                     value: qsTr("52°C")
                     sliderColor: "#FF9800"
+                    precent: 0.81
                 }
             }
         }
