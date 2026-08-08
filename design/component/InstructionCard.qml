@@ -3,8 +3,8 @@ import QtQuick.Layouts
 Item{
     FontLoader{id:jetbrainsmono; source: "qrc:/qt/qml/syscheck/fonts/JetBrainsMono.ttf"}
     id: root
-    implicitWidth: 80
-    implicitHeight: 45
+    Layout.fillWidth: true
+    implicitHeight: 40
     property string title
     property bool isSupport
     property color colorOfBlock
@@ -19,7 +19,7 @@ Item{
         radius: 5
         color: "transparent"
         border.color: isSupport ? colorOfBlock : "#2A2A3A"
-        border.width: 2
+        border.width: 1
     }
     Text {
         anchors.centerIn: parent

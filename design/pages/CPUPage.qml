@@ -12,6 +12,7 @@
             height: parent.height
             leftPadding: 10
             topPadding: 6
+            contentHeight: main.implicitHeight
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
             ScrollBar.vertical: ScrollBar{
 
@@ -26,6 +27,7 @@
                 }
             }
             ColumnLayout{
+                id: main
                 width: scrollView.availableWidth
                 spacing: 20
                 RowLayout{
@@ -134,7 +136,7 @@
                                 {temp:58},
                                 {temp:67}
                             ]
-                            Row{
+                            RowLayout{
                                 id:powerContent
                                 required property int index
                                 required property var modelData
@@ -143,31 +145,28 @@
                                 anchors.right: parent.right
                                 anchors.leftMargin: 10
                                 anchors.rightMargin: 30
-                                spacing: 100
+                                spacing: 15
                                 Text{
                                     text: "Core " + index
                                     font.pixelSize: 12
                                     font.family: jetbrainsmono.name
                                     color: "#7A7A8A"
+                                    Layout.preferredWidth: 60
                                 }
-                                Row{
-                                    width: parent.width
-                                    spacing: 10
                                     Text {
                                         text: modelData.temp + "°C"
                                         font.pixelSize: 12
                                         font.family: jetbrainsmono.name
                                         color: "#7A7A8A"
+                                        Layout.preferredWidth: 40
                                     }
                                     BaseBar{
-                                        width: 220
                                         precent: modelData.temp / 100.0
                                         sliderColor: modelData.temp < 60 ? "#00B4D8" :
                                                         modelData.temp <= 75 ? "#FF8C00" :
                                                         "#FF3D3D"
-                                    }
                                 }
-                            }
+                             }
                         }
                         InfoCardSection{
                             sectionTitle: qsTr("Power & Voltage")
@@ -244,6 +243,7 @@
                             height: 10
                         }
                         GridLayout{
+                            id:grid
                             columns: 10
                             anchors.left: parent.left
                             anchors.right: parent.right
@@ -292,10 +292,10 @@
                                     colorOfBlock: modelData.colorOfBlock
                                 }
                             }
-                            InfoRow{
-                                nameOfBlock: qsTr("26 / 30  instruction sets supported")
-                                colorOfBlock: "transparent"
-                            }
+                        }
+                        InfoRow{
+                            nameOfBlock: qsTr("26 / 30  instruction sets supported")
+                            colorOfBlock: "transparent"
                         }
                     }
                 }

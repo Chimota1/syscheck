@@ -11,6 +11,7 @@ Item {
         height: parent.height
         leftPadding: 10
         topPadding: 6
+        contentHeight: main.implicitHeight
         ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
         ScrollBar.vertical: ScrollBar{
 
@@ -25,6 +26,7 @@ Item {
             }
         }
         RowLayout{
+            id: main
             width: scrollView.availableWidth
             spacing: 20
             ColumnLayout{

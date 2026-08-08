@@ -46,6 +46,9 @@ qt_add_qml_module(appsyscheck
         QML_FILES design/component/BaseBar.qml
         QML_FILES design/pages/CPUPage.qml
         QML_FILES design/component/InstructionCard.qml
+        QML_FILES
+        QML_FILES design/component/CircleBar.qml
+        QML_FILES design/pages/GPUPage.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

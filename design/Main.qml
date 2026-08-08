@@ -8,9 +8,11 @@ Window {
    id: root
    objectName: "window"
    visible: true
-   visibility: "FullScreen"
-   width: 1920
-   height: 1080
+   visibility: Window.Maximized
+   width: Screen.desktopAvailableWidth
+   height: Screen.desktopAvailableHeight
+   minimumWidth: 1024
+   minimumHeight: 724
    color: "#000000"
 
    Header{
@@ -39,6 +41,8 @@ Window {
              return "pages/MotherboardPage.qml"
          else if (currentPage === "CPU")
              return "pages/CPUPage.qml"
+         else if (currentPage === "GPU")
+             return "pages/GPUPage.qml"
          else return "pages/PageNotFound.qml"
    }
 

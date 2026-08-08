@@ -1,5 +1,5 @@
 import QtQuick
-
+import QtQuick.Layouts
 Rectangle {
     id: root
     FontLoader{id:roboto; source: "qrc:/qt/qml/syscheck/fonts/Roboto.ttf"}
@@ -13,7 +13,8 @@ Rectangle {
     property string clockSpeed
     property real precent
     implicitHeight: 150
-    implicitWidth: 200
+    Layout.fillWidth: true
+    Layout.minimumWidth: 14
     radius: 15
     color: bgColor
     opacity: isActive ? 1 : 0.5
@@ -34,20 +35,25 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.margins: 12
         spacing: 8
-        Row{
-            spacing: 30
+        Item{
+            width: parent.width
+            height: coreNameText.implicitHeight
             Text {
+                id: coreNameText
+                anchors.left: parent.left
                 text: qsTr(coreName)
                 color: coreStatusColor
                 font.family: jetbrainsmono.name
-                font.pixelSize: 12
+                font.pixelSize: 11
                 opacity: isActive ? 1 : 0.5
             }
             Text {
+                anchors.right: parent.right
                 text: qsTr(coreStatus)
                 color: coreStatusColor
                 font.family: roboto.name
-                font.pixelSize: 12
+                font.pixelSize: 8
+                font.bold: true
                 opacity: isActive ? 1 : 0.5
             }
         }
@@ -66,6 +72,7 @@ Rectangle {
             opacity: isActive ? 1 : 0.5
         }
         BaseBar{
+            width: parent.width
             sliderColor: "#00B4D8"
             precent: root.precent
             opacity: isActive ? 1 : 0.5

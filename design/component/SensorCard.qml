@@ -10,6 +10,7 @@ Rectangle {
     default property alias contentBlock : content.children
     Layout.fillWidth: true
     Layout.maximumWidth: customMaximumWidth
+    Layout.fillHeight: true
     Layout.alignment: Qt.AlignTop | Qt.AlignLeft
     border.color: "#0D0F17"
     border.width: 3

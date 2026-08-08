@@ -27,7 +27,7 @@ Rectangle {
             id: nameofblock
             text: nameOfBlock
             font.family: roboto.name
-            font.pixelSize: 18
+            font.pixelSize: 14
             color: "#8B90A0"
             font.underline: customUnderline
             Layout.fillWidth: true
@@ -43,7 +43,7 @@ Rectangle {
             id: valueBlock
             text: valueOfBlock
             font.family: roboto.name
-            font.pixelSize: 18
+            font.pixelSize: 14
             color: "#E8EAF0"
             Layout.alignment: Qt.AlignRight
         }

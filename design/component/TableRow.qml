@@ -18,7 +18,7 @@ Row {
             width: root.width * modelData.customWidth
             text: modelData.text
             color: modelData.customColor ? modelData.customColor : "#E0E0E0"
-            font.pixelSize: 14
+            font.pixelSize: 10
             font.family: roboto.name
         }
     }

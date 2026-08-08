@@ -11,6 +11,7 @@ Item {
         height: parent.height
         leftPadding: 10
         topPadding: 6
+        contentHeight: main.implicitHeight
         ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
         ScrollBar.vertical: ScrollBar{
 
@@ -25,6 +26,7 @@ Item {
             }
         }
         RowLayout{
+            id: main
             width: scrollView.availableWidth
             spacing: 20
             ColumnLayout{
@@ -118,8 +120,8 @@ Item {
                         property var headerContent: [
                             {text: "Slot", colWidth:0.21},
                             {text: "Type", colWidth:0.21},
-                            {text: "Status", colWidth:0.28},
-                            {text: "Device", colWidth:0.21}
+                            {text: "Status", colWidth:0.29},
+                            {text: "Device", colWidth:0.22}
                         ]
                         myColumns: headerContent
                     }
