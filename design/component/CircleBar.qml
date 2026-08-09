@@ -1,14 +1,14 @@
 import QtQuick 2.3
 
 Item {
+    id:root
     FontLoader{id:jetbrainsmono; source: "qrc:/qt/qml/syscheck/fonts/JetBrainsMono.ttf"}
-    width: 300
-    height: 400
-    anchors.centerIn: parent
-    property color valueColor: "#00B4D8"
-    property string value: "2400 MHz"
-    property string title: "Core Clock"
-    property real precent: 0.1
+    width: 200
+    height: 200
+        property color valueColor
+        property string value
+        property string title
+        property real precent
     Canvas {
         anchors.fill: parent
         onPaint: {
@@ -32,13 +32,13 @@ Item {
         }
     }
     Column{
-        anchors.centerIn: parent
+        anchors.centerIn: root
         spacing: 2
         Text {
             id: valueBlock
             text: qsTr(value)
             font.family: jetbrainsmono.name
-            font.pixelSize: 14
+            font.pixelSize: 12
             color: valueColor
             anchors.horizontalCenter: parent.horizontalCenter
         }
@@ -46,7 +46,7 @@ Item {
             id: name
             text: qsTr(title)
             font.family: jetbrainsmono.name
-            font.pixelSize: 12
+            font.pixelSize: 10
             color: "#7A7A8A"
         }
     }
