@@ -18,7 +18,7 @@ Item {
             Layout.alignment: Qt.AlignHCenter
         }
         Text{
-            text: qsTr("Sorry we don`t found this page")
+            text: qsTr("Sorry, this page isn't ready yet")
             font.pixelSize: 36
             font.bold: true
             font.family: roboto.name
@@ -26,7 +26,7 @@ Item {
             Layout.alignment: Qt.AlignHCenter
         }
         Text{
-            text: qsTr("please try again")
+            text: qsTr("Come back later")
             font.pixelSize: 36
             font.bold: true
             font.family: roboto.name
