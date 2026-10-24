@@ -7,6 +7,7 @@ Rectangle {
     property string nameOfBlock
     property string valueOfBlock
     property color colorOfBlock
+    property color valueColor: "#E8EAF0"
     property bool customUnderline: false
 
     anchors.left: parent.left
@@ -44,7 +45,7 @@ Rectangle {
             text: valueOfBlock
             font.family: roboto.name
             font.pixelSize: 14
-            color: "#E8EAF0"
+            color: valueColor
             Layout.alignment: Qt.AlignRight
         }
     }

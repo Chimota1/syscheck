@@ -118,8 +118,8 @@ Item {
                     titleColor: "#00B4D8"
                     TableHeader{
                         property var headerContent: [
-                            {text: "Slot", colWidth:0.21},
-                            {text: "Type", colWidth:0.21},
+                            {text: "Slot", colWidth:0.22},
+                            {text: "Type", colWidth:0.22},
                             {text: "Status", colWidth:0.29},
                             {text: "Device", colWidth:0.22}
                         ]

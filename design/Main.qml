@@ -43,6 +43,8 @@ Window {
              return "pages/CPUPage.qml"
          else if (currentPage === "GPU")
              return "pages/GPUPage.qml"
+         else if (currentPage === "Memory")
+             return "pages/MemoryPage.qml"
          else return "pages/PageNotFound.qml"
    }
 
