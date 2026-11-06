@@ -3,10 +3,11 @@ import QtQuick.Layouts
 
 Rectangle {
     property real precent: 0.67
+    property int heightValue: 10
     property color sliderColor
     id: background
     Layout.fillWidth: true
-    height: 10
+    height: heightValue
     radius: 25
     color: "#4A4F60"
     Rectangle{

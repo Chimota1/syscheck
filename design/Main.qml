@@ -45,6 +45,10 @@ Window {
              return "pages/GPUPage.qml"
          else if (currentPage === "Memory")
              return "pages/MemoryPage.qml"
+         else if (currentPage === "Storage")
+             return "pages/StoragePage.qml"
+         else if (currentPage === "Network")
+             return "pages/NetworkPage.qml"
          else return "pages/PageNotFound.qml"
    }
 
